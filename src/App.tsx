@@ -1,14 +1,17 @@
-import React from 'react'
-// import WorldMap from './components/WorldMap'
-import Header from './components/Header'
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/shared/Layout";
+
+// Pages
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-
   return (
-    <div>
-      <Header />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<LandingPage />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;

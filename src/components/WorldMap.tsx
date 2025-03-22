@@ -30,7 +30,7 @@ const WorldMap: React.FC = () => {
   };
 
   return (
-    <MapContainer style={{ height: "100vh", width: "100%" }} zoom={2} center={[20, 0]}>
+    <MapContainer id="map" style={{outline: "none", height: "100%", width: "100%"}} zoom={2} center={[20, 0]}>
       {/* Base map layer */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
